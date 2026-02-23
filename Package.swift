@@ -20,7 +20,6 @@ let package = Package(
             name: "AdiscopeMediaMaxAdapterFanTarget",
             dependencies: [
                 .target(name: "AdiscopeMediaMaxAdapterFan"),
-                .target(name: "AdiscopeMediaMaxAdapterFanMediationAdapter"),
                 .target(name: "FBAudienceNetwork"),
                 .product(name: "AppLovinSDK", package: "AppLovin-MAX-Swift-Package"),
             ],
@@ -30,11 +29,6 @@ let package = Package(
             name: "AdiscopeMediaMaxAdapterFan",
             url: "https://github.com/adiscope/Adiscope-iOS-Sample/releases/download/5.2.0/AdiscopeMediaMaxAdapterFan.zip",
             checksum: "969b6a9f37657c9615533636f50839fa4a5871f1b75e9bddc4f09e96c346aaf9"
-        ),
-        .binaryTarget(
-            name: "AdiscopeMediaMaxAdapterFanMediationAdapter",
-            url: "https://github.com/adiscope/Adiscope-iOS-Sample/releases/download/5.2.0/AppLovinMediationFacebookAdapter.xcframework.zip",
-            checksum: "748cef48ba8837f7376ddd9d5de7f844c30cb6533791ba16edbd0666bba851dc"
         ),
         .binaryTarget(
             name: "FBAudienceNetwork",
