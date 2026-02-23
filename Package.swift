@@ -13,13 +13,14 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git", exact: "13.4.0"),
+        .package(url: "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git", exact: "13.5.1"),
     ],
     targets: [
         .target(
             name: "AdiscopeMediaMaxAdapterFanTarget",
             dependencies: [
                 .target(name: "AdiscopeMediaMaxAdapterFan"),
+                .target(name: "AdiscopeMediaMaxAdapterFanMediationAdapter"),
                 .target(name: "FBAudienceNetwork"),
                 .product(name: "AppLovinSDK", package: "AppLovin-MAX-Swift-Package"),
             ],
@@ -27,13 +28,18 @@ let package = Package(
         ),
         .binaryTarget(
             name: "AdiscopeMediaMaxAdapterFan",
-            url: "https://github.com/adiscope/Adiscope-iOS-Sample/releases/download/5.0.0/AdiscopeMediaMaxAdapterFan.zip",
-            checksum: "a118fadd93473f4232a4ba40c806e6a724734738e63d02386baa5b0fdfc21533"
+            url: "https://github.com/adiscope/Adiscope-iOS-Sample/releases/download/5.2.0/AdiscopeMediaMaxAdapterFan.zip",
+            checksum: "969b6a9f37657c9615533636f50839fa4a5871f1b75e9bddc4f09e96c346aaf9"
+        ),
+        .binaryTarget(
+            name: "AdiscopeMediaMaxAdapterFanMediationAdapter",
+            url: "https://github.com/adiscope/Adiscope-iOS-Sample/releases/download/5.2.0/AppLovinMediationFacebookAdapter.xcframework.zip",
+            checksum: "748cef48ba8837f7376ddd9d5de7f844c30cb6533791ba16edbd0666bba851dc"
         ),
         .binaryTarget(
             name: "FBAudienceNetwork",
-            url: "https://github.com/adiscope/Adiscope-iOS-Sample/releases/download/5.0.0/FBAudienceNetwork.xcframework.zip",
-            checksum: "dee658acdb07bd64e3a0c375611f4d721fe64c131234ef74a609c6875f013d3c"
+            url: "https://github.com/adiscope/Adiscope-iOS-Sample/releases/download/5.2.0/FBAudienceNetwork.xcframework.zip",
+            checksum: "584282ccc2121d3d4c51ea69049665695fbf93c2b581a1e07ddb8b9964d3f1d4"
         ),
     ]
 )
